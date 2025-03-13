@@ -10,6 +10,5 @@ systemctl $cmd osmo-hlr \
                osmo-ggsn \
                osmo-sgsn \
                osmo-sip-connector \
-               osmo-trx \
                osmo-bts \
                osmo-pcu
