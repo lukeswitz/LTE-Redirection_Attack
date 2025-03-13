@@ -1,0 +1,11 @@
+--- ./Transceiver52M/device/bladerf/bladerf.cpp
++++ ./Transceiver52M/device/bladerf/bladerf.cpp
+@@ -370,7 +370,7 @@
+ 		}
+ 		if (!is_locked) {
+ 			LOGC(DDEV, ALERT) << "unable to lock refclk!";
+-			return -1;
++//			return -1;
+ 		}
+ 	}
+ 

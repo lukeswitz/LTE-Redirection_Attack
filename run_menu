@@ -1,0 +1,26 @@
+choice
+prompt "Operator"
+        default operator
+        help
+          Specify the interface you will use to forward internet with OSMOCOM
+config orange
+        bool
+        prompt "Orange"
+        select operator
+config sfr
+        bool
+        prompt "SFR"
+        select operator
+config free
+        bool
+        prompt "Free"
+        select operator
+config bouygues
+        bool
+        prompt "Bouygues Télécom"
+        select operator
+config lyca
+        bool
+        prompt "LycaMobile"
+        select operator
+endchoice

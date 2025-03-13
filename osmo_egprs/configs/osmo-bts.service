@@ -1,0 +1,14 @@
+[Unit]
+Description=Osmocom BTS
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+StateDirectory=osmocom
+WorkingDirectory=/etc/osmocom
+Restart=always
+ExecStart=/usr/bin/osmo-bts-trx -c /etc/osmocom/osmo-bts.cfg
+
+[Install]
+WantedBy=multi-user.target

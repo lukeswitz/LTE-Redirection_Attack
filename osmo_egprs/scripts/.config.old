@@ -1,0 +1,33 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Configuration
+#
+# CONFIG_lo is not set
+CONFIG_wlp3s0=y
+# CONFIG_docker0 is not set
+# CONFIG_br-90fe2e12a8d8 is not set
+# CONFIG_br-f4c5c21592e0 is not set
+# CONFIG_br-0afba564d51e is not set
+# CONFIG_br-406958a1e0b5 is not set
+# CONFIG_br-f191488c67a5 is not set
+# CONFIG_br-3f12649e9aa6 is not set
+# CONFIG_br-c07b439daa61 is not set
+# CONFIG_br-780fdccaea2a is not set
+# CONFIG_br-db46af10687c is not set
+# CONFIG_br-2f80e629264b is not set
+# CONFIG_br-cbb482183113 is not set
+# CONFIG_br-ac88555d0936 is not set
+# CONFIG_br-bb33be158442 is not set
+# CONFIG_br-0c96d4450362 is not set
+# CONFIG_br-a39804e9258f is not set
+# CONFIG_br-b312771a540e is not set
+# CONFIG_br-671ebf7abddf is not set
+# CONFIG_br-4f47a5c926c9 is not set
+# CONFIG_veth0b53852 is not set
+# CONFIG_br-384bd7c5e7a6 is not set
+# CONFIG_br-30c45489f578 is not set
+# CONFIG_br-008eaa09eaf7 is not set
+# CONFIG_orange is not set
+# CONFIG_sfr is not set
+CONFIG_free=y
+# CONFIG_bouygues is not set
