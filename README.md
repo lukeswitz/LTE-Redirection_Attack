@@ -44,3 +44,5 @@ write tx_gain 80
 write rx_gain 30
 start
 ``` 
+
+N.B. :  for external call bonding edit sip.conf in asterisk/sip.conf
