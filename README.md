@@ -22,6 +22,12 @@ In Osmocom Popped Terminal (change MCC//MNC accordingly in osmo-bsc.cfg osmo-bsc
 ./osmo-all.sh start
 ```
 
+Forward your ip in host terminal:
+```bash
+./srsepc_if_masq.sh your_interface
+```
+
+
 LTE Node redirector
 
 ```bash
