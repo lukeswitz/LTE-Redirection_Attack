@@ -19,7 +19,8 @@ sudo ./run.sh
 In Osmocom Popped Terminal (change MCC//MNC accordingly in osmo-bsc.cfg osmo-bsc.cfg)
 
 ```bash
-./osmo-all.sh start
+./runme.sh
+osmo-trx-uhd
 ```
 
 Forward your ip in host terminal:
