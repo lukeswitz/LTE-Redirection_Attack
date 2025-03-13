@@ -26,8 +26,6 @@ sudo udevadm trigger
 sudo ./choose_interface.sh
 sudo modprobe gtp
 sudo systemctl stop udev systemd-udevd-control.socket systemd-udevd-kernel.socket
-cd $MYPATH/builder/
-sudo docker compose up --build -d
 cd $MYPATH/osmo_egprs/
 sudo docker compose up --build -d
 cd $MYPATH/redirect_4_2g
