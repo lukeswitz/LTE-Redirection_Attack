@@ -19,7 +19,8 @@ sudo ./run.sh
 In Osmocom Popped Terminal (change MCC//MNC accordingly in osmo-bsc.cfg osmo-bsc.cfg)
 
 ```bash
-./runme.sh
+./tun.sh
+./osmo-all.sh
 osmo-trx-uhd
 ```
 
