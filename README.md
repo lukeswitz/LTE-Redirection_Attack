@@ -16,7 +16,7 @@ sudo ./run.sh
 
 2G EGPRS Fake base Station :
 
-Change if not in osmocom terminal osmo-bsc.cfg remote ip 192.168.1.23 par l'ip de votre interface internet : remote ip 192.168.X.X
+Change if not in osmocom terminal osmo-bsc.cfg remote ip 192.168.1.23 by your internet interface : remote ip 192.168.X.X
 Change in osmo-sgsn.cfg bind udp local, listen 192.168.1.23 by yours
 
 In Osmocom Popped Terminal (change MCC//MNC accordingly in osmo-bsc.cfg osmo-bsc.cfg)
@@ -29,6 +29,8 @@ osmo-trx-uhd
 Forward your ip in host terminal:
 ```bash
 ./srsepc_if_masq.sh your_interface
+iptables -A POSTROUTING -t nat -s 176.16.32.0/20 ! -d 176.32.16.0/20 -j MASQUERADE
+
 ```
 
 
