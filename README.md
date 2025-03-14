@@ -1,8 +1,10 @@
 # LTE-Redirection_Attack
 Force target victim to unsafe network
 
-## Build
 
+Tested on ubuntu 22.04
+
+## Build
 ```bash
 sudo ./build.sh
 ```
