@@ -22,7 +22,8 @@ Change in osmo-sgsn.cfg bind udp local, listen 192.168.1.23 by yours
 In Osmocom Popped Terminal (change MCC//MNC accordingly in osmo-bsc.cfg osmo-bsc.cfg)
 
 ```bash
-./runme.sh
+./tun.sh
+./osmo-all.sh start
 osmo-trx-uhd
 ```
 
