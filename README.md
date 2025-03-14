@@ -35,8 +35,7 @@ Forward your ip in host terminal:
 ```bash
 bash reset_iptables.sh
 ./srsepc_if_masq.sh your_interface
-iptables -A POSTROUTING -t nat -s 176.16.32.0/20 ! -d 176.32.16.0/20 -j MASQUERADE
-./srsepc_if_masq.sh your_interface
+######?????  iptables -A POSTROUTING -t nat -s 176.16.32.0/20 ! -d 176.32.16.0/20 -j MASQUERADE
 ```
 
 
