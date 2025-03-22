@@ -1,5 +1,13 @@
 [build](https://youtu.be/0aruLybY__w)
+
 # LTE-Redirection_Attack
+
+To be more transparent I don't even know if it is still working, I am alone in this project and testing is sometime right or othertimes wrong.
+I share it for loving free information but be kind with the dev :) i am not really the "best" at all.
+like i say on my github abstract it is what it intent to do not what it do.
+pull requests and issues (if they help to make things going further are really welcome)
+Have a nice hacking day ;)
+
 Force target victim to unsafe network
 
 
