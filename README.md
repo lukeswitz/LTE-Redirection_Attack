@@ -99,7 +99,7 @@ There are several ways to find the MCC/MNC of a target network:
 *   **Testing:** After configuring the MCC/MNC, test your setup to confirm that devices are able to associate with your fake base station. If devices fail to connect, double-check the MCC/MNC and other network parameters.
 
 
-## 2. Modify `osmo-sgsn.cfg`
+### 3. Modify `osmo-sgsn.cfg`
 
 Open `osmo-sgsn.cfg` and change:
 
