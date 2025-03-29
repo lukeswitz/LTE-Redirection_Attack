@@ -1,6 +1,41 @@
-[build](https://youtu.be/0aruLybY__w)
-
 # LTE-Redirection Attack
+
+[Build Video Tutorial](https://youtu.be/0aruLybY__w)
+
+## Table of Contents
+
+1.  [Overview](#overview)
+2.  [Prerequisites](#prerequisites)
+3.  [Installation](#installation)
+4.  [Configuration](#configuration)
+5.  [Usage](#usage)
+6.  [Troubleshooting](#troubleshooting)
+7.  [Contributing](#contributing)
+8.  [References](#references)
+9.  [Legal Notice](#legal-notice)
+
+## Overview
+
+A tool designed to force target victims to connect to an unsafe network by implementing a fake base station and LTE redirection attack.
+
+**DISCLAIMER:** This project is shared for educational purposes only. The developer makes no guarantees about its current functionality as testing results have been inconsistent. Use responsibly and at your own risk.
+
+## Prerequisites
+
+-   Ubuntu 22.04 (tested platform)
+-   Software-defined radio hardware (compatible with UHD)
+-   Basic understanding of cellular networks
+-   Root privileges
+
+## Installation
+
+Clone the repository and build the necessary components:
+
+```bash
+git clone https://github.com/yourusername/LTE-Redirection_Attack.git
+cd LTE-Redirection_Attack
+sudo ./build.sh
+
 
 A tool designed to force target victims to connect to an unsafe network by implementing a fake base station and LTE redirection attack.
 
