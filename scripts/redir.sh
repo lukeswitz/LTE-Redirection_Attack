@@ -4,23 +4,38 @@
 #
 
 echo "Have fun..."
-sudo docker run --net host -it -d -v /dev:/dev --privileged --device /dev/bus/usb:/dev/bus/usb -v /dev:/dev redirect_4_2g-example LTE_fdd_enodeb
+sudo docker run -it -d -v /dev:/dev --privileged --device /dev/bus/usb:/dev/bus/usb -v /dev:/dev redirect_4_2g-app LTE_fdd_enodeb
 pushd $(dirname $0) > /dev/null
 MYPATH=$PWD
 popd > /dev/null
 cd $MYPATH
-python3 -m venv myenv
+operator=$(cat operator)
 source myenv/bin/activate
-pip3 install telnetlib3
-if [[ -n $(grep orange=y operator) ]];then
+if [[ $operator = "orange" ]];then
 python3 telnet_orange.py
-elif [[ -n $(grep sfr=y operator) ]];then
+fi
+if [[ $operator = "sfr" ]];then
 python3 telnet_sfr.py
-elif [[ -n$(grep free=y operator) ]];then
+fi
+if [[ $operator = "free" ]];then
 python3 telnet_free.py
-elif [[ -n $(grep bouygues=y operator) ]];then
-python3 telnet_bouygues.py
-elif [[ -n $(grep lyca=y operator) ]];then
+fi
+if [[ $operator = "bouygues" ]];then
 python3 telnet_bouygues.py
 fi
-telnet 172.17.0.2 30000
+
+#! /bin/sh
+session="eNodeB Redirection"
+if [[ $(tmux attach -t "$session") ]]; then
+  exit 0
+fi
+tmux new-session -d -s "$session"
+window=0
+tmux rename-window -t $window 'Log'
+tmux send-keys -t $window "telnet 172.17.0.2 30001" C-m
+window=1
+tmux new-window -t $seesion:$window -n 'Main'
+tmux send-keys -t $window "telnet 172.17.0.2 30000" C-m
+tmux attach -t "$session"
+
+rm -r myenv

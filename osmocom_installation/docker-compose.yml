@@ -1,9 +1,6 @@
-#
 # Copyright 2025  by Bastien Baranoff
 #
 services:
-  example:
+  app:
     build:
         context: .
-        args:
-          DOCKER_BUILDKIT: 1

@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it --privileged --net host asterisk-example asterisk -cvvvvdddd
+docker run -it --net host -v /dev/snd:/dev/snd --privileged asterisk-app bash ./run.sh

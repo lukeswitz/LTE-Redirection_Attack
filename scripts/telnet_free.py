@@ -48,6 +48,26 @@ async def main():
 
         reply.append(c)
     writer.write("write use_cnfg_file 1\n")
+    while True:
+        c = await reader.read(1)
+        if not c:
+            break
+
+        if c in ['\r', '\n']:
+            break
+
+        reply.append(c)
+    writer.write("write n_ant 2\n")
+    while True:
+        c = await reader.read(1)
+        if not c:
+            break
+
+        if c in ['\r', '\n']:
+            break
+
+        reply.append(c)
+    writer.write("write ip_addr_start 0a000001\n")
 
     while True:
         c = await reader.read(1)
@@ -108,6 +128,18 @@ async def main():
 
         reply.append(c)
 
+    writer.write("write bandwidth 10\n")
+
+    while True:
+        c = await reader.read(1)
+        if not c:
+            break
+
+        if c in ['\r', '\n']:
+            break
+
+        reply.append(c)
+
     writer.write("write tracking_area_code 6601\n")
 
     while True:
@@ -132,7 +164,18 @@ async def main():
 
         reply.append(c)
 
-    writer.write("write tx_gain 90\n")
+    writer.write("write tx_gain 60\n")
+
+    while True:
+        c = await reader.read(1)
+        if not c:
+            break
+
+        if c in ['\r', '\n']:
+            break
+
+        reply.append(c)
+    writer.write("write clock_source external\n")
 
     while True:
         c = await reader.read(1)

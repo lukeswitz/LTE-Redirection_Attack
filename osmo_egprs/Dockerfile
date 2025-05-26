@@ -1,17 +1,16 @@
 #
 # Copyright 2024  by Penthertz (Bastien Baranoff)
 #
-FROM pcu-example as osmo_egprs
+FROM osmocom_installation-app as osmo_egprs
 ARG DEBIAN_FRONTEND=noninteractive
-ADD libresdr_b210.bin
-/usr/share/uhd/images/usrp_b210_fpga.bin
+ADD libresdr_b210.bin /usr/share/uhd/images/usrp_b210_fpga.bin
 WORKDIR /etc/osmocom
+ADD /configs/route /etc/osmocom/
 ADD /scripts/entrypoint.sh /entrypoint.sh
 ADD /configs/operator /etc/osmocom/.
 ADD /scripts/*.sh /etc/osmocom/.
 RUN sed -i -e 's/network-online.target/nss-lookup.target/g' /lib/systemd/system/osmo-*.service
 RUN sed -i -e 's/ser=osmocom/ser=root/g' /lib/systemd/system/osmo-*.service
-RUN sed -i -e 's/oup=osmocom/oup=root/g' /lib/systemd/system/osmo-*.service
 ADD /configs/*.cfg /etc/osmocom/.
 ADD /scripts/.config /etc/osmocom/.
 ADD /configs/osmo-mgw.service /lib/systemd/system/.
